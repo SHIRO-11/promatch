@@ -13,6 +13,8 @@
         @if(!Auth::check())
             {{-- ナビゲーションバー --}}
             @include('commons.top_nav')
+        @else
+            @include('commons.main_nav')
         @endif
 
         <div class="container-fluid">

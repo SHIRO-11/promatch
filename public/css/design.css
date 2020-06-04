@@ -1,5 +1,6 @@
 body{
     color: #636363;
+    background-color: #f0ffff;
 }
 
 h2{
@@ -33,6 +34,35 @@ h3{
   transform : translate(0, 0);
 }
 
+.profile-learning-box {
+    width: 600px;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.profile-shout-box {
+    width: 600px;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.profile-introduction-box {
+    width: 606px;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+
+
 
 #head{
     height:500px;
@@ -56,6 +86,7 @@ h3{
 }
 
 #about{
+    background-color: #fff;
     height:auto;
     padding: 60px 0;
 }
@@ -72,7 +103,6 @@ h3{
 }
 
 #service{
-    height:auto;
     background-color:#f0ffff;
     padding:30px 0;
 }
@@ -84,21 +114,68 @@ h3{
 }
 
 #service h2{
-    padding-bottom: 0px;
+    padding-bottom: 30px;
+}
+
+.service-block{
+    margin-bottom:30px
 }
 
 .white-box{
-    background-color: rgb(255,255,255,0.5);
+    background-color: rgb(255,255,255,0.7);
     border-radius: 30px;
     padding: 15px;
 }
 
 #concept{
-    height:400px;
-    background-color:red;
+    background-color: #fff;
+    height:auto;
+    padding: 60px 0;
+}
+
+#concept-image{
+    width: 400px;
+    height: 250px;
+}
+
+#concept-text{
+    padding:30px;
+    background-color: rgb(240,255,255,1);
+    border-radius:30px;
 }
 
 #resister{
-    height:400px;
-    background-color:blue;
+    background-color:#f0ffff;
+    padding: 30px;
 }
+
+
+@media screen and (max-width: 767px) {
+    /* スクリーンサイズが767px以下の場合に適用 */
+    .profile-learning-box {
+    width: 450px;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.profile-shout-box {
+    width: 450px;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.profile-introduction-box {
+    width: 450px;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+} 
