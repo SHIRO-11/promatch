@@ -1,9 +1,4 @@
 @extends('layouts.app')
-
-@section('head')
-    <link rel="stylesheet"  href="/css/design.css">
-    <script type="text/javascript" src="/js/js_design.js"></script> 
-@endsection
     @section('content')
         @if (session('success'))
         <div class="alert alert-success mt-2">

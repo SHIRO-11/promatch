@@ -1,0 +1,174 @@
+/*アニメーションの設定*/
+
+.fadein {
+  opacity : 0;
+  transform : translate(0, 100px);
+  transition : all 2s;
+}
+ 
+.fadein.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.fadein-speed {
+  opacity : 0;
+  transform : translate(0, 100px);
+  transition : all 1s;
+}
+
+.fadein-speed.active{
+  opacity : 1;
+  transform : translate(0, 0);
+}
+
+.little-big {
+  animation-name: slideInRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  
+  to {
+    opacity: 1;
+  }
+}
+
+.opacity {
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes little-big {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  
+  50%{
+    opacity: 0;
+    width: 40%;
+  }
+  
+  100% {
+    opacity: 1;
+    width: 70%;
+  }
+}
+
+
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideInRight-second {
+  from {
+    opacity: 1;
+    transform: translateX(150px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInRight-second {
+  animation-name: slideInRight-second;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideInRight-third {
+  from {
+    opacity: 1;
+    transform: translateX(200px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInRight-third {
+  animation-name: slideInRight-third;
+  animation-duration: 1.1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideInRight-forth {
+  from {
+    opacity: 1;
+    transform: translateX(250px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInRight-forth {
+  animation-name: slideInRight-forth;
+  animation-duration: 1.4s;
+  animation-timing-function: ease-out;
+}
+
+
+@keyframes slideInRight-fifth {
+  from {
+    opacity: 1;
+    transform: translateX(320px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInRight-fifth {
+  animation-name: slideInRight-fifth;
+  animation-duration: 1.7s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slideInRight-slow {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInRight-slow {
+  animation-name: slideInRight-slow;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+/*アニメーションの設定ここまで*/

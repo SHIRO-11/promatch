@@ -16,7 +16,7 @@ class CreateMicropostsTable extends Migration
         Schema::create('microposts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->string('contet');
+            $table->string('content',10000);
             $table->timestamps();
             
             //外部キー制約

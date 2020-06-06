@@ -1,10 +1,11 @@
 body{
     color: #636363;
-    background-color: #f0ffff;
+    /*background-color: #f0ffff;*/
+    background-color: white;
 }
 
 h2{
-    color: #32e8d7;
+    color: #636363;
     font-family: 'Sacramento', cursive;
 }
 
@@ -12,26 +13,14 @@ h3{
     font-size:20px;
 }
 
-.fadein {
-  opacity : 0;
-  transform : translate(0, 100px);
-  transition : all 2s;
-}
- 
-.fadein.active{
-  opacity : 1;
-  transform : translate(0, 0);
-}
-
-.fadein-speed {
-  opacity : 0;
-  transform : translate(0, 100px);
-  transition : all 1s;
-}
-
-.fadein-speed.active{
-  opacity : 1;
-  transform : translate(0, 0);
+.profile-null-box{
+    width: 600px;
+    height: 2.2em;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
 }
 
 .profile-learning-box {
@@ -61,7 +50,15 @@ h3{
     border-radius: 10px;/*角の丸み*/
 }
 
+.user-card{
+    padding-bottom: 6px;
+    border-bottom:2px solid;
+    border-color: #e6ecf0;
+}
 
+.div-box-30{
+    width: 200px;
+}
 
 
 #head{
@@ -150,8 +147,20 @@ h3{
 }
 
 
+/*メディアクエリ*/
 @media screen and (max-width: 767px) {
     /* スクリーンサイズが767px以下の場合に適用 */
+    
+    .profile-null-box{
+    width: 450px;
+    height: 2.2em;
+    padding: 0.2em 1em;
+    margin: 0.4em 0 1.5em 0 ;
+    background: #FFF;
+    border: solid 3px #6091d3;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+    
     .profile-learning-box {
     width: 450px;
     padding: 0.2em 1em;
@@ -178,4 +187,5 @@ h3{
     border: solid 3px #6091d3;/*線*/
     border-radius: 10px;/*角の丸み*/
 }
-} 
+}
+/*メディアクエリここまで*/
