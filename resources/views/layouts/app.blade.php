@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
         <link rel="stylesheet"  href="/css/design.css">
         <link rel="stylesheet"  href="/css/animation.css">
+        <link href="/css/hover-min.css" rel="stylesheet">
+        <link href="/css/hover.css" rel="stylesheet" media="all">
         <script type="text/javascript" src="/js/js_design.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         @yield('head')

@@ -22,4 +22,22 @@ $(function(){
         
         });
     });
+    
+    
+//     const onMouseenter = (e) => {
+//   // マウスが乗った時の処理
+//   $(e.target).css({
+//     'background-color': '#ff9999',
+//   });
+// };
+// const onMouseleave = (e) => {
+//   // マウスが外れた時の処理
+//   $(e.target).css({
+//     'background-color': '#dddddd',
+//   });
+// };
+
+// $('.box')
+//   .on('mouseenter', onMouseenter)
+//   .on('mouseleave', onMouseleave);
 });

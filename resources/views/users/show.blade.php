@@ -2,14 +2,18 @@
     @section('content')
         <div class="row">
             <div class="col-md-3 opacity">
-                @if ($is_image)
-                <img src="/storage/profile_images/{{ $user->id }}.jpg" width="200" height="200"><br>
+                @if(file_exists(storage_path('/app/public/profile_images/') . $user->id .  '.jpg'))
+                    <img src="/storage/profile_images/{{ $user->id }}.jpg" width="200" height="200">
                 @else
-                <img id="service-image" src="/images/default.png" width="200" height="200"><br>
+                    <img src="/images/default.png" width="200" height="200">
                 @endif
                 {!! link_to_route('users.followings', 'フォロー中',['id' => $user->id],['class' => 'btn btn-secondary mb-3']) !!}
                 {!! link_to_route('users.followers', 'フォロワー',['id' => $user->id],['class' => 'btn btn-secondary mb-3']) !!}
                 @include('commons.follow_button')
+                
+                @if(in_array($user->id,Auth::user()->follow_each()))
+                {!! link_to_route('chats.show', 'チャット', ['chat'=>$user->id],['class'=>'btn btn-primary btn-block mt-2']) !!}
+                @endif
             </div>
             <div class="col-md-6 mt-4">
                 <h2 class="slideInRight">{{$user->name}}</h2>

@@ -2,6 +2,7 @@
 
 
 @section('content')
+
     <a href="#" onclick="history.back(); return false;" class="btn btn-primary mt-4 mb-4">戻る</a>
     @if (count($users) > 0)
         <ul class="list-unstyled opacity">
@@ -21,20 +22,14 @@
                             @if($user->are_followed())
                             あなたをフォローしています。
                             @endif
-                            
-                            @if(Auth::user()->each_following($user))
-                            相互フォローです。
-                            @else
-                            相互フォローではありません。
-                            @endif
                         </div>
                         
-                        <div>
+                        <div class="button hvr-sweep-to-right">
                             {{-- 学習中言語 --}}
                             学習中言語：{{$user->learning_language}}
-                        </div>
+                        </div><br>
                         
-                        <div>
+                        <div class="button hvr-sweep-to-right">
                             {{-- 一言メッセージを表示 --}}
                             一言：{{$user->shout_message}}
                         </div>

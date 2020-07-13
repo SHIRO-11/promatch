@@ -6,10 +6,12 @@
         {!! link_to_route('/', 'フォロー中ユーザーの投稿', [],['class'=>'btn btn-secondary']) !!}
         {!! link_to_route('microposts.all', '全ユーザーの投稿', [],['class'=>'btn btn-primary']) !!}
         </div>
+        
+        
         <h2 class="slideInRight-slow">全ユーザーの投稿</h2>
         <ul class="list-unstyled opacity">
             @foreach ($microposts as $micropost)
-                <li class="media user-card mb-2">
+                <li class="media user-card mb-2 css-hover">
                     <a href="{{ route('users.show',  ['user' => $micropost->user->id]) }}" class="align-self-start mr-3">
                         @if(file_exists(storage_path('/app/public/profile_images/') . $micropost->user->id .  '.jpg'))
                         <img src="/storage/profile_images/{{ $micropost->user->id }}.jpg" width="64" height="64">

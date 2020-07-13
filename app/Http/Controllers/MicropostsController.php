@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Micropost;
 use App\User;
+use App\Events\SendMessage;
 
 class MicropostsController extends Controller
 {
@@ -29,17 +30,33 @@ class MicropostsController extends Controller
         return view('welcome', $data);
     }
     
+
+
+
+    
+    
     public function store(Request $request){
         //バリデーション
         $request->validate([
             'content' => 'required|max:10000',
         ]);
-        
         $request->user()->microposts()->create([
-            'content'=>$request->content,]);
+            'content'=>$request->content,
+            ]);
             
-            return back();
+        $post = new Micropost($request->all());
+        
+        event(new SendMessage($post));    
+
+        return back();
     }
+    
+    
+    
+    
+    
+    
+    
     
     public function destroy($id){
         //idで投稿を検索

@@ -15,7 +15,7 @@ Route::get('/','MicropostsController@index')->name('/');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', 'UsersController'); 
-    Route::resource('chat', 'ChatController');
+    Route::resource('chats', 'ChatController');
     Route::resource('microposts', 'MicropostsController', ['only' => ['store', 'destroy']]);
     Route::get('microposts/all','MicropostsController@all')->name('microposts.all');
     

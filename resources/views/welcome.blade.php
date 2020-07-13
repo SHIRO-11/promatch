@@ -41,7 +41,7 @@
                             {!! Form::open(['route' => ['microposts.destroy', $micropost->id], 'method' => 'delete']) !!}
                                 {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
                             {!! Form::close() !!}
-                        @endif
+                            @endif
                         </div>
                     </div>
                 </li>
@@ -50,12 +50,14 @@
     {{-- ページネーションのリンク --}}
     {{ $microposts->links() }}
     
+
     {!! Form::open(['route' => 'microposts.store']) !!}
     <div class="form-group">
         {!! Form::textarea('content', old('content'), ['class' => 'form-control', 'rows' => '2']) !!}
         {!! Form::submit('Post', ['class' => 'btn btn-primary btn-block']) !!}
     </div>
     {!! Form::close() !!}
+    
     @endsection
 
 

@@ -14,9 +14,9 @@
                 {{-- マイページへのリンク --}}
                 <li class="nav-item"><a href="{{ route('users.show',  ['user' => Auth::id()]) }}" class="nav-link {{ Request::routeIs('users.show', ['user' => $user->id]) && (Auth::id() == $user->id) ? 'active' : '' }}">マイページ</a></li>
                 {{-- タイムラインへのリンク --}}
-                <li class="nav-item"><a href="{{ route('/') }}" class="nav-link {{ Request::routeIs('/') || Request::routeIs('microposts.all') ? 'active' : '' }}" class="nav-link">タイムライン</a></li>
+                <li class="nav-item"><a href="{{ route('/') }}" class="nav-link {{ Request::routeIs('/') || Request::routeIs('microposts.all') ? 'active' : '' }}">タイムライン</a></li>
                 {{-- チャットへのリンク --}}
-                <li class="nav-item"><a href="#" class="nav-link">チャット</a></li>
+                <li class="nav-item"><a href="{{ route('chats.index') }}" class="nav-link {{ Request::routeIs('chats.index') ? 'active' : '' }}" >チャット</a></li>
                 {{-- 全ユーザへのリンク --}}
                 <li class="nav-item"><a href="{{ route('users.index') }}" class="nav-link {{ Request::routeIs('users.index') ? 'active' : '' }}">友達を探す</a></li>
                 {{-- ログアウトへのリンク --}}
