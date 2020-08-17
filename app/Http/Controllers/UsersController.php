@@ -69,7 +69,7 @@ class UsersController extends Controller
     
     public function update(Request $request, $id)
     {
-        // バリデーション
+        // バリデーションです
         $request->validate([
             'photo'=>'image|file|max:2048',
             'name'=>'required|max:30',
