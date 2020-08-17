@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\User;  
+use App\User;
 use App\Micropost;
 use Illuminate\Support\Facades\Storage; //画像を表示するためにStorageを使う
 
-
 class UsersController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         // ユーザ一覧をidの降順で取得
         $users = User::orderBy('id', 'desc')->paginate(10);
         
@@ -21,7 +21,7 @@ class UsersController extends Controller
         ]);
     }
     
-        public function show($id)
+    public function show($id)
     {
         // idの値でユーザを検索して取得
         $user = User::findOrFail($id);
@@ -30,7 +30,7 @@ class UsersController extends Controller
         $user->loadRelationshipCounts();
         
         //ユーザの投稿を取得
-        $microposts = Micropost::where('user_id',$id)->orderBy('id','desc')->paginate(10);
+        $microposts = Micropost::where('user_id', $id)->orderBy('id', 'desc')->paginate(10);
         
         //写真があれば写真を表示
         $is_image = false;
@@ -49,8 +49,8 @@ class UsersController extends Controller
 
     public function edit($id)
     {
-            // idの値でメッセージを検索して取得
-            $user = User::findOrFail($id);
+        // idの値でメッセージを検索して取得
+        $user = User::findOrFail($id);
         
         if (\Auth::id() === $user->id) {
             //写真があれば写真を表示
@@ -67,7 +67,8 @@ class UsersController extends Controller
         }
     }
     
-    public function update(Request $request,$id){
+    public function update(Request $request, $id)
+    {
         // バリデーション
         $request->validate([
             'photo'=>'image|file|max:2048',
@@ -86,9 +87,9 @@ class UsersController extends Controller
         
         $user->save();
         
-        if($request->photo){
+        if ($request->photo) {
             //写真を指定したパスに保存する
-            $request->photo->storeAs('public/profile_images', $id . '.jpg');    
+            $request->photo->storeAs('public/profile_images', $id . '.jpg');
         }
         
         
